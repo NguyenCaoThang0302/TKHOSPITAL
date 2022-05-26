@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ServiceListComponent } from './service-list/service-list.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
+import { VirtualDocComponent } from './virtual-doc/virtual-doc.component';
+import { ScheduleVirtualConfirmComponent } from './schedule-virtual-confirm/schedule-virtual-confirm.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,13 @@ const routes: Routes = [
   {
     path: "service/service-list/:id",component: ServiceDetailComponent
   },
+  {
+    path: "schedule-virtualDoc" , component: VirtualDocComponent
+  },
+  {
+    path: "schedule-virtualDoc/confirm" , component: ScheduleVirtualConfirmComponent
+  }
+
 ];
 
 @NgModule({
@@ -25,4 +34,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponents=[ServiceListComponent,ServicePageComponent,ServiceAfterHourComponent,ServiceDetailComponent]
+export const RoutingComponents=[ServiceListComponent,ServicePageComponent,ServiceAfterHourComponent,ServiceDetailComponent, VirtualDocComponent, ScheduleVirtualConfirmComponent]
